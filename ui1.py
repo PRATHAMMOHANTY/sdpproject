@@ -113,7 +113,7 @@ if uploaded_file is not None:
     preprocessed_image = preprocess_image(image)
     
     # Make predictions using the loaded model
-    predictions = model_absolute_path.predict(preprocessed_image)
+    predictions = model.predict(preprocessed_image)
     print(predictions)
     # Display the image
     st.image(image,use_column_width=True)

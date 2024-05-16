@@ -43,7 +43,7 @@ def generate_masked_image(input_image, model):
 st.title("Image Masking")
 
 # Model loading
-model_path = r"SDPF/vgg"
+model_path = r"sdpproject/vgg"
 model = tf.saved_model.load(model_path)
 
 uploaded_file = st.file_uploader("Choose an image file", type=["jpg", "jpeg", "png"])

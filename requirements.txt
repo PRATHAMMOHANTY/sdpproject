@@ -1,1 +1,8 @@
-opencv-python-headless==4.5.1.48 
+opencv-python-headless==4.5.1.48
+streamlit==1.34.0
+opencv-python-headless==4.5.5.64
+numpy==1.26.4
+Pillow==10.3.0
+matplotlib==3.7.1
+scikit-image==0.21.0
+tensorflow==2.13.0

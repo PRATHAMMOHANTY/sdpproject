@@ -70,13 +70,13 @@ model_option = st.selectbox(
 
 # Load the selected model
 if model_option == "VGG16":
-    model_path = "sdpprojec/vgg"
+    model_path = "sdpproject/vgg"
 elif model_option == "UNet":
-    model_path = "sdpprojec/unetModel"
+    model_path = "sdpproject/unetModel"
 elif model_option == "LeNet":
-    model_path = "sdpprojec/lenet"
+    model_path = "sdpproject/lenet"
 elif model_option == "ResNet":
-    model_path = "sdpprojec/resnet"
+    model_path = "sdpproject/resnet"
 
 
 def calculate_flooded_percentage(image):
@@ -104,7 +104,7 @@ def calculate_flooded_percentage(image):
 uploaded_file = st.file_uploader("Choose an image", type=["jpg", "jpeg", "png"])
 
 if uploaded_file is not None:
-    model = load_model(r"sdpprojec/model.h5")
+    model = load_model(r"sdpproject/model.h5")
     # Read the image
     image = cv2.imdecode(np.fromstring(uploaded_file.read(), np.uint8), 1)
     

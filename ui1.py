@@ -72,11 +72,11 @@ model_option = st.selectbox(
 if model_option == "VGG16":
     model_path = "vgg"
 elif model_option == "UNet":
-    model_path = "sdpproject/unetModel"
+    model_path = "unetModel"
 elif model_option == "LeNet":
-    model_path = "sdpproject/lenet"
+    model_path = "lenet"
 elif model_option == "ResNet":
-    model_path = "sdpproject/resnet"
+    model_path = "resnet"
 
 
 def calculate_flooded_percentage(image):

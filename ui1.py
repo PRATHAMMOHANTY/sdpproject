@@ -104,7 +104,7 @@ def calculate_flooded_percentage(image):
 uploaded_file = st.file_uploader("Choose an image", type=["jpg", "jpeg", "png"])
 
 if uploaded_file is not None:
-    model_abs_path = os.path.abspath("sdpproject/model.h5")
+    model_abs_path = os.path.abspath("sdpproject/blob/main/model.h5")
     model = tf.keras.models.load_model(model_abs_path)
     
     # Read the image

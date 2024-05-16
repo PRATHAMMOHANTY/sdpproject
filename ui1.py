@@ -104,7 +104,7 @@ def calculate_flooded_percentage(image):
 uploaded_file = st.file_uploader("Choose an image", type=["jpg", "jpeg", "png"])
 
 if uploaded_file is not None:
-    model = load_model(r"sdpproject/model.h5")
+    model_absolute_path = os.path.abspath("sdpproject/model.h5")
     # Read the image
     image = cv2.imdecode(np.fromstring(uploaded_file.read(), np.uint8), 1)
     
@@ -112,7 +112,7 @@ if uploaded_file is not None:
     preprocessed_image = preprocess_image(image)
     
     # Make predictions using the loaded model
-    predictions = model.predict(preprocessed_image)
+    predictions = model_absolute_path.predict(preprocessed_image)
     print(predictions)
     # Display the image
     st.image(image,use_column_width=True)
